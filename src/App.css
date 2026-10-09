@@ -1,0 +1,151 @@
+.app {
+  max-width: 720px;
+  margin: 24px auto;
+  padding: 24px;
+  box-sizing: border-box;
+  background: #fff;
+  color: #1e293b;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  text-align: left;
+  font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+}
+
+.app h1 {
+  margin: 0 0 16px;
+  font-size: 1.6rem;
+  color: #1e293b;
+}
+
+/* Buscador */
+.buscador {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.buscador input {
+  flex: 1;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+  color: #1e293b;
+}
+
+.buscador input:focus {
+  outline: none;
+  border-color: #f87171;
+  box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.3);
+}
+
+.buscador button {
+  padding: 0 16px;
+  font-size: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+  color: #1e293b;
+  cursor: pointer;
+}
+
+.buscador button:hover {
+  background: #f1f5f9;
+}
+
+/* Lista de ciudades */
+.ciudades {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.ciudades button {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #1e293b;
+  font-size: 1rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.ciudades button:hover {
+  background: #f1f5f9;
+}
+
+.ciudades .activa button {
+  background: #eef2f7;
+  font-weight: 700;
+}
+
+/* Mensajes */
+.mensaje {
+  margin: 8px 0 16px;
+  color: #64748b;
+}
+
+.mensaje.error {
+  color: #b91c1c;
+}
+
+/* Pronóstico */
+.pronostico {
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+.pronostico h2 {
+  margin: 0 0 8px;
+  font-size: 1.3rem;
+  color: #1e293b;
+}
+
+.actual {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+  margin: 0 0 16px;
+}
+
+.temperatura {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.resumen {
+  margin: 0 0 16px;
+  padding: 10px 12px;
+  background: #fefce8;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+/* Siete días */
+.dias {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.dia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 4px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 560px) {
+  .dias {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
