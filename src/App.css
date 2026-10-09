@@ -1,12 +1,32 @@
+:root {
+  --fondo: #0f2744;
+  --tarjeta: #ffffff;
+  --azul-oscuro: #0b2a4a;
+  --azul: #1d4ed8;
+  --azul-medio: #3b82f6;
+  --azul-claro: #dbeafe;
+  --azul-suave: #eff6ff;
+  --borde: #bfdbfe;
+  --texto: #0f2744;
+  --texto-suave: #475f7f;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(160deg, #0f2744 0%, #1e40af 100%);
+}
+
 .app {
   max-width: 720px;
   margin: 24px auto;
   padding: 24px;
   box-sizing: border-box;
-  background: #fff;
-  color: #1e293b;
-  border: 1px solid #e2e8f0;
+  background: var(--tarjeta);
+  color: var(--texto);
+  border: 1px solid var(--borde);
   border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   text-align: left;
   font-family: system-ui, "Segoe UI", Roboto, sans-serif;
 }
@@ -14,7 +34,7 @@
 .app h1 {
   margin: 0 0 16px;
   font-size: 1.6rem;
-  color: #1e293b;
+  color: var(--azul-oscuro);
 }
 
 /* Buscador */
@@ -28,30 +48,31 @@
   flex: 1;
   padding: 12px;
   font-size: 1rem;
-  border: 1px solid #cbd5e1;
+  border: 1px solid var(--borde);
   border-radius: 8px;
-  background: #fff;
-  color: #1e293b;
+  background: var(--azul-suave);
+  color: var(--texto);
 }
 
 .buscador input:focus {
   outline: none;
-  border-color: #f87171;
-  box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.3);
+  border-color: var(--azul-medio);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.35);
+  background: #fff;
 }
 
 .buscador button {
   padding: 0 16px;
   font-size: 1rem;
-  border: 1px solid #cbd5e1;
+  border: none;
   border-radius: 8px;
-  background: #fff;
-  color: #1e293b;
+  background: var(--azul);
+  color: #fff;
   cursor: pointer;
 }
 
 .buscador button:hover {
-  background: #f1f5f9;
+  background: #1e40af;
 }
 
 /* Lista de ciudades */
@@ -67,25 +88,26 @@
   border: none;
   border-radius: 6px;
   background: transparent;
-  color: #1e293b;
+  color: var(--texto);
   font-size: 1rem;
   text-align: left;
   cursor: pointer;
 }
 
 .ciudades button:hover {
-  background: #f1f5f9;
+  background: var(--azul-suave);
 }
 
 .ciudades .activa button {
-  background: #eef2f7;
+  background: var(--azul-claro);
+  color: var(--azul-oscuro);
   font-weight: 700;
 }
 
 /* Mensajes */
 .mensaje {
   margin: 8px 0 16px;
-  color: #64748b;
+  color: var(--texto-suave);
 }
 
 .mensaje.error {
@@ -95,14 +117,15 @@
 /* Pronóstico */
 .pronostico {
   padding: 20px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--borde);
   border-radius: 10px;
+  background: linear-gradient(180deg, var(--azul-suave) 0%, #fff 60%);
 }
 
 .pronostico h2 {
   margin: 0 0 8px;
   font-size: 1.3rem;
-  color: #1e293b;
+  color: var(--azul-oscuro);
 }
 
 .actual {
@@ -116,12 +139,15 @@
 .temperatura {
   font-size: 2.2rem;
   font-weight: 700;
+  color: var(--azul);
 }
 
 .resumen {
   margin: 0 0 16px;
   padding: 10px 12px;
-  background: #fefce8;
+  background: var(--azul-claro);
+  color: var(--azul-oscuro);
+  border-left: 4px solid var(--azul-medio);
   border-radius: 6px;
   font-size: 0.95rem;
 }
@@ -139,8 +165,10 @@
   align-items: center;
   gap: 4px;
   padding: 8px 4px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--borde);
   border-radius: 6px;
+  background: #fff;
+  color: var(--texto);
   font-size: 0.9rem;
 }
 
